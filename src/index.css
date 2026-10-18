@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #1c1c1c;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.page {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.title {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 52px;
+  letter-spacing: -1px;
+  color: #0f0f0f;
+  margin: 8px 0 30px;
+}
+
+.site {
+  border-top: 2px solid #111111;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 16px 28px;
+}
+
+.logo {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #fbf3dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 46px;
+}
+
+.nav-links a {
+  color: #1c1c1c;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Main layout ---------- */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+  padding: 34px 20px 10px;
+  align-items: start;
+}
+
+.shoes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+}
+
+/* ---------- Shoe card ---------- */
+.shoe-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shoe-image-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.shoe-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.shoe-info {
+  background: #dcc7a0;
+  border-radius: 12px;
+  margin-top: 12px;
+  padding: 18px 16px 22px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.shoe-name {
+  font-weight: 700;
+  font-size: 19px;
+  color: #1f1f1b;
+  margin: 0 0 14px;
+  min-height: 46px;
+}
+
+.shoe-price {
+  font-size: 19px;
+  color: #1f1f1b;
+  margin: 0 0 18px;
+}
+
+.add-btn {
+  background: #e7d8bb;
+  border: 1px solid #b6a079;
+  color: #2a2a24;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  padding: 9px 20px;
+  border-radius: 22px;
+  cursor: pointer;
+  align-self: center;
+  margin-top: auto;
+}
+
+.add-btn:hover {
+  background: #d8c69f;
+}
+
+/* ---------- Cart ---------- */
+.cart {
+  background: #f4f4f4;
+  border-radius: 16px;
+  padding: 24px 22px;
+}
+
+.cart-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cart-thumb {
+  width: 66px;
+  height: 46px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cart-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1c1c1c;
+  margin: 0;
+}
+
+.cart-item-price {
+  font-size: 15px;
+  color: #333333;
+  margin: 8px 0 0;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: #dcc7a0;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  color: #2a2a24;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover {
+  background: #cdb891;
+}
+
+.qty-val {
+  font-size: 16px;
+  min-width: 16px;
+  text-align: center;
+}
+
+.cart-total {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 26px 0 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 560px) {
+  .shoes-grid {
+    grid-template-columns: 1fr;
+  }
+  .navbar {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    gap: 24px;
+  }
+  .nav-links a {
+    font-size: 18px;
+  }
+}
